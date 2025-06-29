@@ -8,16 +8,16 @@ Proyek ini adalah sistem rekomendasi buku menggunakan pendekatan Content-Based F
 ```
 cbf-rekomendasi/
 ├── backend/
-│ ├── app.py
-│ ├── model/
-│ │ ├── recommender.py
-│ │ └── db.py
+│   ├── app.py                  # Main Flask API
+│   └── model/
+│       ├── recommender.py      # Logika rekomendasi CBF
+│       └── db.py               # Koneksi ke database MySQL
 ├── frontend/
-│ ├── index.html
-│ ├── js/
-│ │ ├── api.js
-│ │ └── main.js
-└── requirements.txt
+│   ├── index.html              # Halaman utama web
+│   └── js/
+│       ├── api.js              # Kode fetch API
+│       └── main.js             # Logika interaksi dan event listener
+└── requirements.txt            # Daftar dependensi Python
 ```
 
 ---
@@ -52,10 +52,9 @@ python app.py
 Flask akan berjalan di: http://localhost:5000
 
 ### 5. Jalankan Frontend (via Live Server)
-- Masuk ke folder frontend/
-- Buka index.html dengan Live Server (di VSCode: klik kanan → Open with Live Server)
-- Atau via terminal:
-
+- Opsi 1: Menggunakan Live Server di VSCode
+> Klik kanan index.html → Open with Live Server
+- Opsi 2: Jalankan HTTP server manual
 ```bash
 cd frontend
 python -m http.server 5500
@@ -63,12 +62,12 @@ python -m http.server 5500
 Buka browser ke: http://localhost:5500
 
 ## ⚙️ Konfigurasi Database MySQL
-Buat database pustaka dan tabel books:
+- Buat database dan tabel
 
 ```sql
-CREATE DATABASE pustaka;
+CREATE DATABASE book-recommendation-cbf;
 
-USE pustaka;
+USE book-recommendation-cbf;
 
 CREATE TABLE books (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -78,4 +77,15 @@ CREATE TABLE books (
   classification TEXT
 );
 ```
-Impor data kamu ke tabel books sesuai kolom di atas.
+- Import Data
+  Pastikan data buku kamu dimasukkan ke dalam tabel books sesuai kolom di atas. Bisa dilakukan via phpMyAdmin (jika menggunakan Laragon) atau tool lain.
+
+---
+
+## ✅ Fitur
+- ✅ Autocomplete judul buku
+- ✅ Rekomendasi buku berdasarkan deskripsi
+- ✅ Filter stopwords (kata umum dalam Bahasa Indonesia)
+- ✅ Integrasi langsung ke database MySQL
+
+
