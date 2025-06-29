@@ -1,38 +1,44 @@
 import { getRekomendasi } from './api.js';
 
+const inputTitle = document.getElementById("inputTitle");
+const hasilList = document.getElementById("hasilRekomendasi");
+const suggestionBox = document.getElementById("suggestions");
+
+// ==== Tombol Cari Rekomendasi ====
 document.getElementById('btnCari').addEventListener('click', async () => {
-  const judul = document.getElementById('inputTitle').value.trim();
-  const hasilList = document.getElementById('hasilRekomendasi');
-  hasilList.innerHTML = "<li>🔄 Mencari rekomendasi...</li>";
+  const judul = inputTitle.value.trim();
+  hasilList.innerHTML = "<p>🔄 Mencari rekomendasi...</p>";
 
   if (!judul) {
-    hasilList.innerHTML = "<li>⚠️ Judul tidak boleh kosong.</li>";
+    hasilList.innerHTML = "<p>⚠️ Judul tidak boleh kosong.</p>";
     return;
   }
 
   try {
     const data = await getRekomendasi(judul);
-    if (data.length === 0) {
-      hasilList.innerHTML = "<li>📭 Tidak ada rekomendasi ditemukan.</li>";
+    if (!data || data.length === 0) {
+      hasilList.innerHTML = "<p>❌ Tidak ada rekomendasi ditemukan.</p>";
     } else {
       hasilList.innerHTML = "";
-      data.forEach(item => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${item.title}</strong><br>${item.spec_detail_info}`;
-        hasilList.appendChild(li);
-      });
+      hasilList.classList.add("card-container");
+      hasilList.innerHTML = data.map(item => `
+        <div class="card">
+          <img src="img/default_cover.png" alt="Cover Buku">
+          <div class="card-content">
+            <h3>${item.title}</h3>
+            <p>${item.spec_detail_info}</p>
+          </div>
+        </div>
+      `).join("");
     }
   } catch (err) {
-    hasilList.innerHTML = `<li>❌ ${err.message}</li>`;
+    hasilList.innerHTML = `<p>❌ ${err.message}</p>`;
   }
 });
 
 // ==== AUTOCOMPLETE ====
-const titleInput = document.getElementById("inputTitle");
-const suggestionBox = document.getElementById("suggestions");
-
-titleInput.addEventListener("input", async () => {
-  const query = titleInput.value.trim();
+inputTitle.addEventListener("input", async () => {
+  const query = inputTitle.value.trim();
   if (query.length < 2) {
     suggestionBox.innerHTML = "";
     return;
@@ -48,7 +54,7 @@ titleInput.addEventListener("input", async () => {
 
     document.querySelectorAll("#suggestions li").forEach(item => {
       item.addEventListener("click", () => {
-        titleInput.value = item.textContent;
+        inputTitle.value = item.textContent;
         suggestionBox.innerHTML = "";
       });
     });

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Rekomendasi Buku</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header class="top-header">
+    <div class="title">
+      <h1>📚 Sistem Rekomendasi Buku</h1>
+      <p>Temukan buku lain yang mirip dengan minatmu</p>
+    </div>
+  </header>
+  
   <main>
-    <h1>📚 Sistem Rekomendasi Buku</h1>
-    <input type="text" id="inputTitle" placeholder="Masukkan judul buku...">
-    <ul id="suggestions" class="autocomplete-list"></ul>
-    <button id="btnCari">Cari Rekomendasi</button>
+    <div class="search-box">
+      <input type="text" id="inputTitle" placeholder="Masukkan judul buku...">
+      <ul id="suggestions" class="autocomplete-list"></ul>
+      <button id="btnCari">🔍 Cari Rekomendasi</button>
+    </div>
 
     <h2>📖 Rekomendasi:</h2>
-    <ul id="hasilRekomendasi"></ul>
+    <div id="hasilRekomendasi" class="card-container"></div>
   </main>
 
   <script type="module" src="js/main.js"></script>
