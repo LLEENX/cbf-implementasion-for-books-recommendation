@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.py~ 
+
+# Environment
+venv/
+.env
+
+# VSCode
+.vscode/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Live Server / temporary
+frontend/.vscode/
+frontend/node_modules/
+
+# Database (kalau ada)
+*.db
+*.sqlite3
+
+# Others
+*.log
