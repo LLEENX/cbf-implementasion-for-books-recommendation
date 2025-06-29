@@ -12,8 +12,6 @@ cbf-rekomendasi/
 │ ├── model/
 │ │ ├── recommender.py
 │ │ └── db.py
-│ └── database/
-│ └── koneksi.py
 ├── frontend/
 │ ├── index.html
 │ ├── js/
