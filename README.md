@@ -5,6 +5,7 @@ Proyek ini adalah sistem rekomendasi buku menggunakan pendekatan Content-Based F
 ---
 
 ## 📦 Struktur Folder
+```
 cbf-rekomendasi/
 ├── backend/
 │ ├── app.py
@@ -19,6 +20,7 @@ cbf-rekomendasi/
 │ │ ├── api.js
 │ │ └── main.js
 └── requirements.txt
+```
 
 ---
 
