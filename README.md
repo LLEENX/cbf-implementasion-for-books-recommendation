@@ -10,13 +10,14 @@ cbf-rekomendasi/
 ├── backend/
 │   ├── app.py                  # Main Flask API
 │   └── model/
-│       ├── recommender.py      # Logika rekomendasi CBF
-│       └── db.py               # Koneksi ke database MySQL
+│       ├── recommender.py          # Logika rekomendasi CBF
+│       └── db.py                   # Koneksi ke database MySQL
+|       ├── Book-Converted-1.csv    # Database
 ├── frontend/
-│   ├── index.html              # Halaman utama web
+│   ├── index.html                  # Halaman utama web
 │   └── js/
-│       ├── api.js              # Kode fetch API
-│       └── main.js             # Logika interaksi dan event listener
+│       ├── api.js                  # Kode fetch API
+│       └── main.js                 # Logika interaksi dan event listener
 └── requirements.txt            # Daftar dependensi Python
 ```
 
@@ -78,7 +79,7 @@ CREATE TABLE books (
 );
 ```
 - Import Data
-  Pastikan data buku dimasukkan ke dalam tabel books sesuai kolom di atas. Bisa dilakukan via phpMyAdmin (jika menggunakan Laragon) atau tool lain.
+  Pastikan data buku (Book-Converted-1.csv) dimasukkan ke dalam tabel books sesuai kolom di atas. Bisa dilakukan via phpMyAdmin (jika menggunakan Laragon) atau tool lain.
 
 ---
 
