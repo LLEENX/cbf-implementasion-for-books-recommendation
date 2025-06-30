@@ -1,6 +1,6 @@
 # 📚 Sistem Rekomendasi Buku Berbasis Content-Based Filtering (CBF)
 
-Proyek ini adalah sistem rekomendasi buku menggunakan pendekatan Content-Based Filtering berbasis Flask (backend) dan HTML/JS (frontend). Sistem merekomendasikan buku lain berdasarkan kemiripan tema/isi dengan buku yang dicari.
+Proyek ini adalah sistem rekomendasi buku menggunakan pendekatan *Content-Based Filtering* berbasis Flask (backend) dan HTML/JS (frontend). Sistem merekomendasikan buku lain berdasarkan kemiripan tema/isi dengan buku yang dicari.
 
 ---
 
@@ -23,7 +23,7 @@ cbf-rekomendasi/
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### 1. Clone/Unduh Proyek
 ```bash
@@ -83,7 +83,7 @@ CREATE TABLE books (
 
 ---
 
-## ✅ Fitur
+## Fitur
 - ✅ Autocomplete judul buku
 - ✅ Rekomendasi buku berdasarkan deskripsi
 - ✅ Filter stopwords (kata umum dalam Bahasa Indonesia)
