@@ -8,7 +8,7 @@ Proyek ini adalah sistem rekomendasi buku menggunakan pendekatan Content-Based F
 ```
 cbf-rekomendasi/
 ├── backend/
-│   ├── app.py                  # Main Flask API
+│   ├── app.py                      # Main Flask API
 │   └── model/
 │       ├── recommender.py          # Logika rekomendasi CBF
 │       └── db.py                   # Koneksi ke database MySQL
@@ -18,7 +18,7 @@ cbf-rekomendasi/
 │   └── js/
 │       ├── api.js                  # Kode fetch API
 │       └── main.js                 # Logika interaksi dan event listener
-└── requirements.txt            # Daftar dependensi Python
+└── requirements.txt                # Daftar dependensi Python
 ```
 
 ---
