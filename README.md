@@ -78,7 +78,7 @@ CREATE TABLE books (
 );
 ```
 - Import Data
-  Pastikan data buku kamu dimasukkan ke dalam tabel books sesuai kolom di atas. Bisa dilakukan via phpMyAdmin (jika menggunakan Laragon) atau tool lain.
+  Pastikan data buku dimasukkan ke dalam tabel books sesuai kolom di atas. Bisa dilakukan via phpMyAdmin (jika menggunakan Laragon) atau tool lain.
 
 ---
 
