@@ -11,8 +11,8 @@ cbf-rekomendasi/
 │   ├── app.py                      # Main Flask API
 │   └── model/
 │       ├── recommender.py          # Logika rekomendasi CBF
-│       └── db.py                   # Koneksi ke database MySQL
-|       ├── Book-Converted-1.csv    # Database
+│       ├── db.py                   # Koneksi ke database MySQL
+│       └── Book-converted-1.csv    # Database
 ├── frontend/
 │   ├── index.html                  # Halaman utama web
 │   └── js/
